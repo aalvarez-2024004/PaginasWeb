@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #9e9e9e;
+}
+
+/* NAVBAR */
+.nav-paginas {
+    width: 100%;
+    height: 70px;
+    background: #141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-paginas a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-paginas a:hover {
+    color: #f36e4d;
+}
+
+.nav-paginas a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #bb2525;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-paginas a:hover::after {
+    width: 100%;
+}
