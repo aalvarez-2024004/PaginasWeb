@@ -256,6 +256,36 @@ body {
     color: #333;
 }
 
+/* Ultima seccion */
+.ultima-parte {
+    background-color: #c1121f; /* rojo fuerte */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-ultimo {
+    max-width: 900px;
+    text-align: center;
+}
+
+.contenido-ultimo h2 {
+    color: #000000; /* negro */
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.contenido-ultimo p {
+    color: #ffffff; /* blanco */
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
 /* Animaciones */
 @keyframes slideLeft {
     from {
