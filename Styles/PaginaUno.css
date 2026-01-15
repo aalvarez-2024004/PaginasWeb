@@ -305,9 +305,7 @@ body {
 }
 
 
-/* =========================
-   ANIMACIONES
-========================= */
+/* Animaciones*/
 @keyframes fadeLeft {
     from { opacity: 0; transform: translateX(-40px); }
     to { opacity: 1; transform: translateX(0); }
@@ -323,43 +321,142 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* NavBar Responsive*/
+@media (max-width: 768px) {
+    .nav-paginas {
+        flex-direction: row;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    .nav-paginas a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-paginas {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+/* Seccion Principal Responsive*/
 @media (max-width: 1024px) {
-    .info-principal,
+    .info-principal {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .texto-info h1 {
+        font-size: 48px;
+    }
+    .texto-info p {
+        font-size: 18px;
+    }
+    .info-imagen img {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .texto-info h1 {
+        font-size: 32px;
+    }
+    .texto-info p {
+        font-size: 16px;
+    }
+}
+
+/* Seccion Secundaria  Responsive*/
+@media (max-width: 1024px) {
     .info-secundaria {
         grid-template-columns: 1fr;
         grid-template-areas:
             "titulo"
             "video"
             "texto";
+        padding: 40px 20px;
         text-align: center;
-        padding: 80px 60px;
     }
-
-    .texto-info p,
+    .video-secundario video {
+        max-width: 400px;
+    }
     .texto-secundario p {
-        margin: auto;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 600px) {
-    .nav-paginas {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;
-    }
-
-    .texto-info h1 {
-        font-size: 32px;
-    }
-
     .info-secundaria h2 {
         font-size: 28px;
     }
-
     .video-secundario video {
         max-width: 260px;
+    }
+}
+
+/* Seccion Terciaria  Responsive*/
+
+@media (max-width: 1024px) {
+    .texto-terciario h2 {
+        font-size: 32px;
+    }
+    .texto-terciario p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .texto-terciario h2 {
+        font-size: 24px;
+    }
+    .texto-terciario .dato-destacado {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Seccion Adicional  Responsive*/
+@media (max-width: 1024px) {
+    .galeria {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria {
+        flex-direction: column;
+        height: auto;
+    }
+    .galeria .item {
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    .galeria .item span {
+        font-size: 18px;
+    }
+}
+
+/* Responsive para celulares*/
+
+@media (max-width: 480px) {
+    .galeria .item span {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .info-principal,
+    .info-secundaria,
+    .info-terciaria,
+    .info-adicional {
+        padding: 20px 10px;
+    }
+    .texto-info,
+    .texto-secundario,
+    .texto-terciario {
+        max-width: 100%;
     }
 }
