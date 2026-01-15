@@ -258,7 +258,7 @@ body {
 
 /* Ultima seccion */
 .ultima-parte {
-    background-color: #c1121f; /* rojo fuerte */
+    background-color: #c1121f; 
     padding: 80px 20px;
     display: flex;
     justify-content: center;
@@ -271,7 +271,7 @@ body {
 }
 
 .contenido-ultimo h2 {
-    color: #000000; /* negro */
+    color: #000000;
     font-size: 42px;
     font-weight: 800;
     margin-bottom: 30px;
@@ -279,7 +279,7 @@ body {
 }
 
 .contenido-ultimo p {
-    color: #ffffff; /* blanco */
+    color: #ffffff;
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -318,45 +318,76 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
-/*RESPONSIVE*/
-@media (max-width: 1024px) {
-    .contenedor-principal {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
+/* NAVBAR - Responsive */
+@media (max-width: 768px) {
+    .nav-paginas {
+        gap: 20px;
     }
-
-    .imagen-adrian {
-        margin-left: 0;
-        width: 220px;
-        height: 220px;
-    }
-
-    .btn-movimiento {
-        text-align: center;
+    .nav-paginas a {
+        font-size: 14px;
     }
 }
 
-@media (max-width: 600px) {
-    .parte-principal {
-        padding-top: 40px;
+/* 1era Seccion - Responsive */
+@media (max-width: 1024px) {
+    .contenedor-principal {
+        flex-direction: column;
+        text-align: center;
     }
-
     .texto-primario h1 {
-        font-size: 2.3rem;
+        font-size: 2.8rem;
     }
-
     .texto-primario h2 {
         font-size: 1.1rem;
     }
-
     .imagen-adrian {
-        width: 220px;
-        height: 220px;
+        width: 300px;
+        height: 300px;
+        margin-left: 0;
+        margin-top: 20px;
     }
+}
 
+/* 2da Seccion - Responsive */
+@media (max-width: 1024px) {
+    .parte-dos {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 8%;
+    }
+    .seccion-dos h2 {
+        font-size: 2.5rem;
+    }
+    .imagen-biografia {
+        height: 350px;
+    }
+}
+
+/* 3era seccion - Responsive */
+@media (max-width: 1024px) {
+    .contenedor-expectativas {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .expectativa {
+        max-width: 100%;
+    }
+}
+
+/* Ultima seccion - Responsive */
+@media (max-width: 768px) {
+    .contenido-ultimo h2 {
+        font-size: 32px;
+    }
+    .contenido-ultimo p {
+        font-size: 16px;
+    }
+}
+
+/* Botones - Responsive */
+@media (max-width: 600px) {
     .btn-movimiento {
-        font-size: 0.8rem;
-        padding: 12px 16px;
+        font-size: 0.75rem;
+        padding: 12px;
     }
 }
