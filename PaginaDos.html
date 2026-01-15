@@ -25,11 +25,11 @@
                     Graduando 6to Perito en KINAL
                 </h2>
 
-                <button class="btn-movimiento" onclick="trasladoBiografia()">
+                <button class="btn-movimiento" onclick="irA('biografia')">
                     VER BIOGRAFÍA
                 </button>
 
-                <button class="btn-movimiento" onclick="trasladoExpectativas()">
+                <button class="btn-movimiento" onclick="irA('expectativas')">
                     VER EXPECTATIVAS DE AÑO
                 </button>
 
@@ -48,9 +48,48 @@
         </div>
     </section>
 
-    <section class="parte-dos">
-        
+    <section id="biografia" class="parte-dos">
+        <div class="seccion-dos">
+            <h2>Sobre Mí</h2>
+            <p>
+                Soy Adrián Álvarez, tengo 17 años y soy estudiante de informática. 
+                Desde pequeño he sentido curiosidad por entender cómo funcionan las computadoras,
+                las aplicaciones, las páginas web y los videojuegos. 
+                La tecnología no solo me interesa, me inspira. 
+                Me considero una persona creativa, con pasión por la programación, 
+                el diseño web y la ciberseguridad. Aspiro a estudiar ingeniería en 
+                sistemas, construir un futuro estable y crecer tanto personal como 
+                profesionalmente. <br> <br> Creo firmemente que si uno sueña en grande es porque 
+                el corazón sabe que es posible.
+            </p>
+        </div>
+
+        <div class="imagen-biografia">
+            <img src="Images/BioGrafia.jpg" alt="Foto de Adrian">
+        </div>
     </section>
+
+    <section id="expectativas" class="parte-tres">
+        <h2>MIS EXPECTATIVAS</h2>
+
+        <div class="contenedor-expectativas">
+            <div class="expectativa">
+                <h3>Graduarme de 6to Perito</h3>
+                <p>
+                    Mi principal expectativa es culminar con éxito mi ultimo año de la carrera
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+    function irA(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+    </script>
 
 </body>
 
