@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Barra de naveggacion*/
+.nav-paginas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-izquierdo img {
+    height: 40px;
+}
+
+.nav-derecho img {
+    height: 60px;
+}
+
+.nav-medio {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-medio a {
+    text-decoration: none;
+    color: #0b2c66;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    position: relative;
+    padding: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-medio a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #0b2c66;
+    transition: width 0.3s ease;
+}
+
+.nav-medio a:hover::after {
+    width: 100%;
+}
+
+/* Seccion del carousel*/
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item img {
+    height: 65vh;
+    object-fit: cover;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.texto-carousel {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    z-index: 10;
+    max-width: 520px;
+}
+
+.texto-carousel h5 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.texto-carousel h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.texto-carousel h2 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.texto-carousel h2 span {
+    font-weight: 900;
+}
+
+.texto-carousel .badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 20px;
+    background-color: #f7941d;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+/* texto carousel izquierdo*/
+/* Lo mismo pero a la izquierda*/
+.texto-carousel-izq {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    z-index: 10;
+    max-width: 520px;
+    text-align: left;
+}
+
+.texto-carousel-izq h5 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.texto-carousel-izq h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.texto-carousel-izq h2 {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.texto-carousel-izq h2 span {
+    font-weight: 900;
+}
+
+.texto-carousel-izq .badge {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 20px;
+    background-color: #f7941d;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+    .nav-medio {
+        display: none;
+    }
+
+    .texto-carousel {
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+
+    .texto-carousel h1 {
+        font-size: 38px;
+    }
+
+    .texto-carousel h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .texto-carousel h1 {
+        font-size: 30px;
+    }
+
+    .texto-carousel h2 {
+        font-size: 22px;
+    }
+
+    .texto-carousel .badge {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
