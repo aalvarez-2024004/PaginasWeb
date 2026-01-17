@@ -65,7 +65,7 @@ html, body {
 }
 
 .carousel-item img {
-    height: 65vh;
+    height: 90vh;
     object-fit: cover;
 }
 
@@ -170,7 +170,6 @@ html, body {
     filter: invert(1);
 }
 
-
 /* Seccion para info de kinal (seccion 2)*/
 .info-kinal {
     max-width: 100%;
@@ -193,7 +192,7 @@ html, body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.824);
+    background: rgba(255, 255, 255, 0.39);
     z-index: 0;
 }
 
@@ -299,5 +298,54 @@ html, body {
     justify-content: center;
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Seccion para los patrocinadores (seccion 3)*/
+.patrocinadores {
+    padding: 80px 50px;
+    background-color: #1b2058;
+    text-align: center;
+}
+
+.patrocinadores h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.contenedor-patrocinadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.patrocinador {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+.patrocinador img {
+    max-width: 90px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.35s ease;
+}
+
+/* Hover elegante */
+.patrocinador:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.patrocinador:hover img {
+    filter: grayscale(0%);
 }
 
