@@ -349,7 +349,6 @@ html, body {
 }
 
 /* Seccion para los trabajadores (seccion 4)*/
-
 .area-trabajos,
 .area-trabajos-invertida {
     display: flex;
@@ -448,3 +447,78 @@ html, body {
 .area-trabajos-invertida {
     margin-top: 40px;
 }
+
+/* Seccion para mostrar los jovenes bneficiados y blog (seccion 5)*/
+.beneficiados {
+    background: linear-gradient(180deg, #14274e, #0f1f3d);
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.beneficiados h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+}
+
+.beneficiados-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.beneficiados-grid > div {
+    padding: 60px 20px;
+    border-radius: 6px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.beneficiados-grid > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,.25);
+}
+
+.beneficiados-grid h3 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.beneficiados-grid span {
+    width: 40px;
+    height: 2px;
+    background: rgba(255,255,255,.8);
+    margin-bottom: 20px;
+}
+
+.beneficiados-grid p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.beneficio-amarillo {
+    background: #ceb900;
+}
+
+.beneficio-vino {
+    background: #7b0f3b;
+}
+
+.beneficio-azul {
+    background: #243b6b;
+}
+
+.beneficio-naranja {
+    background: #da6b03;
+}
+
