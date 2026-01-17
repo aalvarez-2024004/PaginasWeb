@@ -522,3 +522,75 @@ html, body {
     background: #da6b03;
 }
 
+/* Seccion para mostrar el blog de kinal(seccion 6)*/
+.seccion-blog {
+    background: #14274e;
+    padding: 70px 5%;
+    text-align: center;
+}
+
+.seccion-blog h2 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.blog-espacio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.espacio-blog {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 120px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.25);
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.espacio-blog:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.35);
+}
+
+.espacio-blog img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.75);
+    transition: transform .4s ease, filter .4s ease;
+}
+
+.espacio-blog:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.55);
+}
+
+.blog-mensaje {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.blog-mensaje span {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.blog-mensaje h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 8px;
+    line-height: 1.3;
+}
