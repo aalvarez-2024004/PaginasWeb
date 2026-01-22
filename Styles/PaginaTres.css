@@ -530,9 +530,9 @@ html, body {
     justify-content: center;
 }
 
-.video-container {
-    width: 20%;
-    max-width: 30px;
+.contenedor-video {
+    width: 90%;
+    max-width: 1000px;
     aspect-ratio: 16 / 9;
     background: #000;
     border-radius: 20px;
@@ -540,7 +540,7 @@ html, body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-.video-container video {
+.contenedor-video video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -824,11 +824,17 @@ html, body {
         padding: 10px 20px;
     }
 
-    .nav-medio {
-        flex-wrap: wrap;
-        justify-content: center;
+   .nav-derecho img {
+        height: 40px;
     }
 
+    .nav-medio {
+        gap: 15px;
+    }
+
+    .nav-medio a {
+        font-size: 13px;
+    }
     .texto-carousel,
     .texto-carousel-izq {
         left: 5%;
@@ -852,6 +858,18 @@ html, body {
 
     .info-kinal {
         padding: 30px 20px;
+    }
+
+    .carrera-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carrera-imagen img {
+        width: 100%;
+        height: auto;
+        max-width: 280px;
+        margin: auto;
     }
 
     .contenido-derecha {
@@ -889,30 +907,33 @@ html, body {
     }
 }
 
-/* Móviles pequeños */
 @media (max-width: 480px) {
-    .nav-medio {
-        gap: 10px;
+
+    /* Ajuste general del carousel */
+    .carousel-item img {
+        height: 60vh;
     }
 
-    .nav-medio a {
-        font-size: 12px;
-    }
-
+    /* Texto centrado y contenido */
     .texto-carousel,
     .texto-carousel-izq {
-        left: 2%;
-        max-width: 250px;
+        top: 50%;
+        left: 5%;
+        right: 5%;
+        transform: translateY(-50%);
+        max-width: 100%;
+        text-align: left;
     }
 
+    /* Tamaños de texto */
     .texto-carousel h5,
     .texto-carousel-izq h5 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .texto-carousel h1,
     .texto-carousel-izq h1 {
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .texto-carousel h2,
@@ -920,22 +941,9 @@ html, body {
         font-size: 20px;
     }
 
-    .info-derecha h1 {
-        font-size: 1.5rem;
-    }
-
-    .patrocinadores h2,
-    .beneficiados h2,
-    .seccion-blog h2,
-    .explicacion-rediseño h2 {
-        font-size: 1.5rem;
-    }
-
-    .beneficiados-grid h3 {
-        font-size: 2.5rem;
-    }
-
-    .tarjetas-explicacion {
-        grid-template-columns: 1fr;
+    .texto-carousel .badge,
+    .texto-carousel-izq .badge {
+        font-size: 14px;
+        padding: 6px 12px;
     }
 }
